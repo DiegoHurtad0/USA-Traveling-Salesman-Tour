@@ -12,6 +12,12 @@ The TSP consists of determining a minimum distance circuit passing through each 
 
 Many methods have been used to solve routing problem, because of the complexity of the problem (NP-hard), in some cases exact methods, but usually metaheuristics, classic heuristics.  D. Hurtado-Olivares et al.
 
+The total number of tours is obtained by multiplying these values: N-1 x (N-2) x (N-3) x . . . x 3 x 2 x 1. 
+
+( N-1 !)
+
+That is in an unimaginably large number of possibilities. Even for 50 cities, the world's fastest supercomputer has no hope of going through the full count of tours one by one to pick out the shortest.
+
 <h3 align="left">Exact algorithms:</h3> 
 
 A large number of exact algorithms have been proposed for the TSP. These can be best understood and explained in the context of integer linear programming (ILP)
