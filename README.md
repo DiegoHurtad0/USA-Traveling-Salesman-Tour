@@ -158,7 +158,11 @@ The following table lists the options for local search strategies (also called m
 
 
 
-
+ 
+ 
+ 
+ 
+ 
 <h4 align="left">Efficient route planning for travelling salesman problem for 48 USA States</h4>
 
 
