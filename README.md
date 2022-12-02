@@ -86,7 +86,7 @@ The following table describes the most common search limits.
 
 <h3 align="left"> Algorithm performance:</h3>
 
-Comparing the different algorithms with some fixed data of 45 states of USA, there were some interesting results attached below:
+Comparing the different algorithms with some fixed data of 48 states of USA, there were some interesting results attached below:
 
 Limit in seconds to the time spent in the search was 5 min for each Algorithm
 
@@ -128,13 +128,26 @@ The following table lists the options for local search strategies (also called m
 
 <h3 align="left">Visualization of Routes: </h3>
 
-<a href=""><img width="480" height="550" align='left' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USAStates.png?raw=true"></a>
+<a href=""><img width="450" height="450" align='left' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USAStates.png?raw=true"></a>
 
-<a href=""><img width="480" height="550" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
+<a href=""><img width="450" height="450" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
 
 <br>
 <br>
+
+
 <h4 align="center">Efficient route planning for travelling salesman problem for 48 USA States</h4>
+
+
+<br>
+<br>
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/diegohurtadoo" target="blank"><img align="left" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="diegohurtadoo" height="30" width="40" /></a>
+<a href="https://kaggle.com/diego o'hurtado" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="diego o'hurtado" height="30" width="40" /></a>
+</p>
+
 
 <h3 align="left">Languages:</h3>
 <a href="" target="blank"><img align="left" src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="diegohurtadoo" height="30" width="40" /></a>
