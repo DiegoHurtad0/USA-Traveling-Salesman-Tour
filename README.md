@@ -128,11 +128,11 @@ The following table lists the options for local search strategies (also called m
 
 <h3 align="left">Visualization of Routes: </h3>
 <p>
-  <a href=""><img width="450" height="450" align='left' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USAStates.png?raw=true"></a>
+  <a href=""><img width="400" height="450" align='left' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USAStates.png?raw=true"></a>
 </p>
 
 <p>
-  <a href=""><img width="450" height="450" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
+  <a href=""><img width="400" height="450" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
 </p>  
 
 <br>
