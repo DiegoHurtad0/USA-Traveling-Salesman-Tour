@@ -133,8 +133,6 @@ The following table lists the options for local search strategies (also called m
   <a href=""><img width="300" height="450" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
 </p>  
 
-<h4 align="center">Efficient route planning for travelling salesman problem for 48 USA States</h4>
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/diegohurtadoo" target="blank"><img align="left" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="diegohurtadoo" height="30" width="40" /></a>
@@ -157,6 +155,11 @@ The following table lists the options for local search strategies (also called m
 <img src="https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer"> 
+
+
+
+
+<h4 align="left">Efficient route planning for travelling salesman problem for 48 USA States</h4>
 
 
 <h3 align="left">References: </h3>
