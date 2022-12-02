@@ -125,6 +125,14 @@ The following table lists the options for local search strategies (also called m
 | Local search options    |TABU_SEARCH                |        17, 121      	  |        5       	        |Google Ortools   |
 | Local search options    |GENERIC_TABU_SEARCH        |        17, 418      	  |        5       	        |Google Ortools   |
 
+<h3 align="left">Best Solution: </h3>
+
+|       Name              |        Type       	      |        	OF       	|  
+|:----------------------:	|:------------------------:	|:----------------------:	|
+| GUIDED_LOCAL_SEARCH          |0, 8, 39, 2, 21, 15, 40, 33, 28, 1, 25, 3, 34, 44, 9, 23, 41, 4, 47, 38, 30, 20, 12, 24, 13, 22, 10, 46, 19, 11, 14, 32, 45, 35, 31, 42, 16, 26, 18, 36, 5, 27, 6, 17, 43, 29, 37, 7|        17,062      	  |
+| LOCAL_CHEAPEST_ARC          |0, 7, 37, 29, 43, 17, 6, 27, 5, 36, 18, 26, 16, 42, 31, 35, 45, 32, 19, 46, 20, 30, 38, 47, 4, 41, 23, 9, 44, 34, 3, 25, 1, 28, 33, 40, 15, 21, 2, 22, 13, 24, 12, 10, 11, 14, 39, 8|        17,062      	  |
+
+I choosed LOCAL_CHEAPEST_ARC solution to visualizate the route
 
 <h3 align="left">Visualization of Routes: </h3>
 
