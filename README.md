@@ -131,7 +131,10 @@ The following table lists the options for local search strategies (also called m
  <a href=""><img width="300" height="450" align='left' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USAStates.png?raw=true"></a>
 <p>
   <a href=""><img width="300" height="450" align='right' src="https://github.com/DiegoHurtad0/USA-Traveling-Salesman-Tour/blob/main/output/USATravelingSalesmanProblem.png?raw=true"></a>
-</p>  
+</p>
+
+ 
+<h4 align="center">Efficient route planning for travelling salesman problem for 48 USA States</h4>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -139,31 +142,20 @@ The following table lists the options for local search strategies (also called m
 <a href="https://kaggle.com/diego o'hurtado" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="diego o'hurtado" height="30" width="40" /></a>
 </p>
 
-
 <h3 align="left">Languages:</h3>
 <a href="" target="blank"><img align="left" src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="diegohurtadoo" height="30" width="40" /></a>
 <br>
 <h3 align="left">Data Science Tools:</h3>
-
 <img src="https://www.vectorlogo.zone/logos/usepanda/usepanda-icon.svg" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 <img src="https://www.vectorlogo.zone/logos/google_maps/google_maps-tile.svg" alt="seaborn" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer"> 
 <img src="https://geopandas.org/en/stable/_images/geopandas_icon_green.png" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 
 
 <h3 align="left">Data Visualization Tools: </h3>
-
 <img src="https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="plotly" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="" target="_blank" rel="noreferrer"> 
 
-
-
- 
- 
- 
- 
- 
-<h4 align="left">Efficient route planning for travelling salesman problem for 48 USA States</h4>
 
 
 <h3 align="left">References: </h3>
