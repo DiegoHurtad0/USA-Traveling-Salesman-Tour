@@ -1,6 +1,16 @@
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
 
+
+'''
+   _____
+ /|_||_\`.__
+(   _    _ _)
+=`-(_)--(_)-' TSP Diego Hurtado
+``````````````````````````````````````````````````````````
+
+'''
+
 class RandomMatrix(object):
     """Random matrix."""
 
@@ -23,11 +33,74 @@ class RandomMatrix(object):
     def Distance(self, manager, from_index, to_index):
         return self.matrix[manager.IndexToNode(from_index)][manager.IndexToNode(
             to_index)]
-    
+
+class Customer:
+    def __init__(self, number, x, y, distance_matrix):
+        self.number = number
+        self.x = x
+        self.y = y
+        self.distance_matrix = distance_matrix
+        """Stores the data for the problem"""
+        self.data = {}
+        self.data['distance_matrix'] = self.distance_matrix  # yapf: disable
+        self.data['num_locations'] = len(data['locations'])
+        self.data['depot'] = 0
+        self.data['city_name'] = 1
+        self.data['num_vehicles'] = 1
+
+        self.data['time_windows'] = []
+        self.data['demands'] = []
+        self.data['time_per_demand_unit'] = 5  # 5 minutes/unit
+        self.data['num_vehicles'] = 4
+        self.data['vehicle_capacity'] = 15
+        self.data['vehicle_speed'] = 83  # Travel speed: 5km/h converted in m/min
+
+    def __repr__(self):
+        return f"C_{self.number}"
+
+    def distance(self, target):
+        return math.sqrt(math.pow(self.x - target.x, 2) + math.pow(target.y - self.y, 2))
+
 class TSPSolver:
     def __init__(self, num_nodes, distance_matrix):
         self.num_nodes = num_nodes
         self.distance_matrix = distance_matrix
+
+    def distance_callback(from_index, to_index):
+        """Returns the distance between the two nodes."""
+        # Convert from routing variable Index to distance matrix NodeIndex.
+        from_node = manager.IndexToNode(from_index)
+        to_node = manager.IndexToNode(to_index)
+        return data['distance_matrix'][from_node][to_node]
+
+    def manhattan_distance(position_1, position_2):
+        """Computes the Manhattan distance between two points"""
+        return (
+            abs(position_1[0] - position_2[0]) + abs(position_1[1] - position_2[1]))
+
+
+    def print_solution(manager, routing, solution):
+        list_route = []
+        """Prints solution on console."""
+        # print('Objective: {} miles'.format(solution.ObjectiveValue()))
+        fo = solution.ObjectiveValue()
+        # print(fo)
+        index = routing.Start(0)
+        # plan_output = 'Route for vehicle 0:\n'
+        plan_output = ''
+        route_distance = 0
+        
+        while not routing.IsEnd(index):
+            plan_output += ' {} ->'.format(manager.IndexToNode(index))
+            list_route.append(manager.IndexToNode(index))
+            previous_index = index
+            index = solution.Value(routing.NextVar(index))
+            route_distance += routing.GetArcCostForVehicle(previous_index, index, 0)
+        # plan_output += ' {}\n'.format(manager.IndexToNode(index))
+        plan_output += ' 0'
+        # plan_output += 'Route distance: {}miles\n'.format(route_distance)
+
+        return list_route, plan_output, fo
 
     def solve(self):
         # Create routing model
