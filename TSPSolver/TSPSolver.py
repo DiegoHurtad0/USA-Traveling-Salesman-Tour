@@ -61,6 +61,21 @@ class Customer:
     def distance(self, target):
         return math.sqrt(math.pow(self.x - target.x, 2) + math.pow(target.y - self.y, 2))
 
+class RoutingProblem:
+    def __init__(self, name, customers: list, vehicle_number, vehicle_capacity):
+        self.name = name
+        self.customers = customers
+        self.vehicle_number = vehicle_number
+        self.vehicle_capacity = vehicle_capacity
+
+    def obj_func(self, routes):
+        return sum(map(lambda x: x.total_distance, routes))
+
+class Route:
+    def __init__(self, problem: RoutingProblem, customers: list):
+        self.RoutingProblem: RoutingProblem = RoutingProblem
+
+
 class TSPSolver:
     def __init__(self, num_nodes, distance_matrix):
         self.num_nodes = num_nodes
