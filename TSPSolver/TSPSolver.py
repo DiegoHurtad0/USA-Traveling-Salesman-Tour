@@ -6,7 +6,7 @@ from ortools.constraint_solver import pywrapcp
    _____
  /|_||_\`.__
 (   _    _ _)
-=`-(_)--(_)-' TSP Diego Hurtado
+=`-(_)--(_)-' Routing Problem Diego Hurtado
 ``````````````````````````````````````````````````````````
 
 '''
@@ -75,6 +75,13 @@ class Route:
     def __init__(self, problem: RoutingProblem, customers: list):
         self.RoutingProblem: RoutingProblem = RoutingProblem
 
+class VisualizationProblem:
+    def __init__(self, name):
+        self.name = name
+
+    def obj_func(self, routes):
+        return sum(map(lambda x: x.total_distance, routes))
+
 
 class TSPSolver:
     def __init__(self, num_nodes, distance_matrix):
@@ -116,6 +123,35 @@ class TSPSolver:
         # plan_output += 'Route distance: {}miles\n'.format(route_distance)
 
         return list_route, plan_output, fo
+
+    def find_min_travel_distance_route(self, distance_matrix):
+        """
+        Find the route that minimizes the total travel distance given a distance matrix.
+        
+        Args:
+        distance_matrix (list of lists): A square matrix where the (i, j)th element represents the distance between nodes i and j.
+        
+        Returns:
+        list: A list representing the route that minimizes the total travel distance.
+        """
+        # Create a graph from the distance matrix
+        G = nx.Graph()
+        for i in range(len(distance_matrix)):
+            for j in range(i+1, len(distance_matrix)):
+                G.add_edge(i, j, weight=distance_matrix[i][j])
+
+        # Find an approximate solution to the TSP using the Christofides algorithm
+        T = nx.algorithms.approximation.traveling_salesman.christofides(G)
+
+        # Calculate the total distance of the cycle
+        total_distance = sum(distance_matrix[T[i]][T[i+1]] for i in range(len(T)-1)) + distance_matrix[T[-1]][T[0]]
+
+        # Print the route and the total distance
+        print("Route:", T)
+        print("Total distance:", total_distance)
+
+        # Return the route
+        return T
 
     def solve(self):
         # Create routing model
