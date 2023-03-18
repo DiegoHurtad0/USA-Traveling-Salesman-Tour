@@ -82,6 +82,68 @@ class VisualizationProblem:
     def obj_func(self, routes):
         return sum(map(lambda x: x.total_distance, routes))
 
+class ExactSolver:
+    def __init__(self, num_nodes, distance_matrix):
+        self.num_nodes = num_nodes
+        self.distance_matrix = distance_matrix
+
+    def compute_mst_lb(distance_matrix, path, unvisited):
+        # compute the minimum spanning tree of the subgraph induced by path + unvisited
+        n = len(distance_matrix)
+        mst_cost = 0
+        mst_nodes = set(path) if path else set()
+        unvisited_nodes = set(unvisited)
+        while unvisited_nodes:
+            # find the closest edge from a visited node to an unvisited node
+            closest_dist = math.inf
+            closest_edge = None
+            for i in mst_nodes:
+                for j in unvisited_nodes:
+                    if distance_matrix[i][j] < closest_dist:
+                        closest_edge = (i, j)
+                        closest_dist = distance_matrix[i][j]
+            # add the closest edge to the minimum spanning tree
+            mst_nodes.add(closest_edge[1])
+            unvisited_nodes.remove(closest_edge[1])
+            mst_cost += closest_dist
+        # add the cost of the remaining edges in the tour to the minimum spanning tree cost
+        if len(path) > 1:
+            for i in range(n-1):
+                if i < len(path) - 1:
+                    edge = (path[i], path[i+1])
+                else:
+                    edge = (path[-1], path[0])
+                mst_cost += distance_matrix[edge[0]][edge[1]]
+        # return the lower bound
+        return mst_cost
+
+    def tsp_exact(distance_matrix):
+        n = len(distance_matrix)
+        best_cost = math.inf
+        stack = []
+        initial_node = (0, [0], 0, set(range(1, n)))
+        heapq.heappush(stack, initial_node)
+        while stack:
+            _, path, cost, unvisited = heapq.heappop(stack)
+            if not unvisited:
+                # complete tour found
+                cost += distance_matrix[path[-1]][path[0]]
+                if cost < best_cost:
+                    best_cost = cost
+                    best_path = path
+            else:
+                for i in unvisited:
+                    child_path = path + [i]
+                    if len(child_path) > 1:
+                        child_cost = cost + distance_matrix[path[-1]][i]
+                        child_unvisited = unvisited - {i}
+                        # compute lower bound using minimum spanning tree heuristic
+                        lb = compute_mst_lb(distance_matrix, child_path, child_unvisited)
+                        if lb < best_cost:
+                            child_node = (lb, child_path, child_cost, child_unvisited)
+                            heapq.heappush(stack, child_node)
+        return best_path, best_cost
+
 
 class TSPSolver:
     def __init__(self, num_nodes, distance_matrix):
